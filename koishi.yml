@@ -1,0 +1,31 @@
+port: 8080
+maxPort: 8090
+nickname:
+  - 萝拉
+plugins:
+  group:basic:
+    help:
+    ~rate-limit:
+    suggest:
+    image-search:
+      saucenaoApiKey:
+        - 00877b50671e88560c0400f5047a111123386cd2
+    adapter-onebot:
+        selfId: '1215501732'
+        password: yctmyyxwyy*
+        endpoint: ws://127.0.0.1:6700
+        protocol: ws
+        disabled: false
+  group:console:
+    console:
+      open: true
+    ~dataview:
+    logger:
+    insight:
+    market:
+      registry:
+        endpoint: https://registry.npmmirror.com
+      search:
+        endpoint: ${{ env.GITHUB_CONTENT_MIRROR }}/koishijs/registry/dist/index.json
+    sandbox:
+    status:
